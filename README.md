@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 📈 Stock Portfolio Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A sleek and responsive web application built with React and Material-UI for tracking your stock portfolio. Add stocks, view their performance, and get a real-time summary of your total portfolio value.
 
-## Available Scripts
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Add & Manage Stocks**: Easily add new stocks to your portfolio by providing the ticker symbol and number of shares.
+* **Real-time Portfolio Value**: Get an instant calculation of your total portfolio's current market value.
+* **CRUD Operations**: Update the number of shares or delete stocks from your portfolio with an intuitive UI.
+* **Detailed Stock View**: Click on any stock to navigate to a dedicated page with historical data and charts.
+* **Persistent Data**: Your portfolio is saved to the browser's local storage, so your data persists between sessions.
+* **Dynamic UI**: A modern, animated gradient background and responsive design built with Material-UI.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project is built using the following technologies:
 
-### `npm run build`
+* **Frontend**: React, React Router
+* **UI Library**: Material-UI (MUI)
+* **Data Fetching**: Axios
+* **Charting**: Recharts
+* **API**: [Finnhub Stock API](https://finnhub.io/) for real-time stock data.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow these instructions to get a local copy of the project up and running.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+You need to have Node.js and npm installed on your machine.
+* [Node.js](https://nodejs.org/) (which includes npm)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.  **Clone the repository:**
+    
+    git clone [https://github.com/MayankRaj435/stock-portfolio.git](https://github.com/MayankRaj435/stock-portfolio.git)
+    cd stock-portfolio
+    
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2.  **Install NPM packages:**
+    
+    npm install
+    
 
-## Learn More
+3.  **Set up Environment Variables:**
+    This project requires an API key from [Finnhub](https://finnhub.io/) to fetch stock data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    * Sign up for a free API key at [Finnhub](https://finnhub.io/register).
+    * Create a `.env` file in the root of your project.
+    * Add your API key to the `.env` file as follows:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+        
+        REACT_APP_FINNHUB_API_KEY=your_api_key_here
+        
+    * **Important**: You will also need to update `/src/api/stockapi.js` to use this environment variable instead of the hardcoded key.
+        
 
-### Code Splitting
+        const API_KEY = process.env.REACT_APP_FINNHUB_API_KEY;
+        
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Running the Application
 
-### Analyzing the Bundle Size
+Once the dependencies are installed and the environment variables are set, you can run the app in development mode.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm start
