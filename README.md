@@ -47,14 +47,18 @@ First, clone the repository to your local machine.
 Bash
 
 git clone https://github.com/MayankRaj435/stock-portfolio.git
+
 cd stock-portfolio
+
 2. Install Dependencies 📦
 Next, install all the necessary npm packages.
 
 Bash
 
 npm install
+
 3. Set Up Your API Key 🔑
+
 This app needs a key from Finnhub to work its magic.
 
 Sign up for a free API key at finnhub.io/register.
