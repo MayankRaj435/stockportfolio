@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_KEY = "cv8rgh1r01qk2jfs40hgcv8rgh1r01qk2jfs40i0"; 
+const API_KEY = ""; 
 const BASE_URL = 'https://finnhub.io/api/v1';
 
 // Function to get a stock quote
